@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded",function(event){
     const ordersContent = document.getElementsByClassName("orders-content");
     const ordersContainer = document.getElementById("orders-container");
 
+    // este total alegerea ta, dar folosind nume asa lungi pt iteratori devine destul de greu de citit codul
     for(let currentItemMenu=0; currentItemMenu<itemsMenu.length; currentItemMenu++){
         const itemMenu = itemsMenu[currentItemMenu];
         
@@ -47,6 +48,8 @@ document.addEventListener("DOMContentLoaded",function(event){
                 ordersContainer.classList.remove("hidden");
             }
     })
+
+    // destul de manuala tehnica asta, vom vedea intr-un exemplu prin care trecem la lectie ca putem sa ne folosim de continut HTML deja creat iar cand este trigger-uit un anumit event adaugam continut specific, evitand sa pozitionam manual la fiecare mouseover cum ai incercat tu
     //MouseOver event on products
     const products=document.getElementsByClassName("product");
     for(let indexProducts = 0; indexProducts < products.length-1; indexProducts++){

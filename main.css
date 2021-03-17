@@ -19,7 +19,7 @@ body > div{
     display:flex;
     height: 100%;
 }
-aside{
+aside, main{
     display:block;
 }
 .menu-container{

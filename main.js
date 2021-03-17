@@ -6,9 +6,8 @@ document.addEventListener("DOMContentLoaded",function(event){
     const ordersContent = document.getElementsByClassName("orders-content");
     const ordersContainer = document.getElementById("orders-container");
 
-    // este total alegerea ta, dar folosind nume asa lungi pt iteratori devine destul de greu de citit codul
-    for(let currentItemMenu=0; currentItemMenu<itemsMenu.length; currentItemMenu++){
-        const itemMenu = itemsMenu[currentItemMenu];
+    for(let i=0; i<itemsMenu.length; i++){
+        const itemMenu = itemsMenu[i];
         
         itemMenu.addEventListener('click',function(){
             selectMenu(itemsMenu,itemMenu); //itemsMenu selected
@@ -20,15 +19,15 @@ document.addEventListener("DOMContentLoaded",function(event){
             const logoItems = document.getElementsByClassName("logos");
             console.log("contentItems",contentItems);
             //show content 
-            for(let contentItemsIndex=0; contentItemsIndex<contentItems.length; contentItemsIndex++){
-                if(!contentItems[contentItemsIndex].classList.contains('hidden')){
-                    contentItems[contentItemsIndex].classList.add("hidden");
+            for(let j=0; j<contentItems.length; j++){
+                if(!contentItems[j].classList.contains('hidden')){
+                    contentItems[j].classList.add("hidden");
                 }
             }
             //show logo
-            for(let logoItemsIndex=0; logoItemsIndex<logoItems.length;logoItemsIndex++){
-                if(!logoItems[logoItemsIndex].classList.contains('hidden')){
-                    logoItems[logoItemsIndex].classList.add("hidden");
+            for(let k=0; k<logoItems.length;k++){
+                if(!logoItems[k].classList.contains('hidden')){
+                    logoItems[k].classList.add("hidden");
                 }
             }
             showContentLogo(content);
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded",function(event){
             }
     })
 
-    // destul de manuala tehnica asta, vom vedea intr-un exemplu prin care trecem la lectie ca putem sa ne folosim de continut HTML deja creat iar cand este trigger-uit un anumit event adaugam continut specific, evitand sa pozitionam manual la fiecare mouseover cum ai incercat tu
+    /*
     //MouseOver event on products
     const products=document.getElementsByClassName("product");
     for(let indexProducts = 0; indexProducts < products.length-1; indexProducts++){
@@ -60,8 +59,6 @@ document.addEventListener("DOMContentLoaded",function(event){
             setTimeout(function(){
                 event.target.style.height= "";
                 event.target.style.width= "";
-                // trebuie sa folosesc position left sau ceva de genu ca sa 
-                //nu intre in celelalte elemente cand folosesc mouseover. Am incercat ceva de genu dar nu merge -->  event.style.left="";
             }, 500);
         }, false);
         products[indexProducts].addEventListener("mouseout",function(event){
@@ -73,7 +70,7 @@ document.addEventListener("DOMContentLoaded",function(event){
                
             }, 500);
         }, false);
-    }
+    }*/
 })
 var selectMenu = function(itemsMenu,itemMenu){
     for(let index=0; index<itemsMenu.length; index++){

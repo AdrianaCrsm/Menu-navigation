@@ -14,6 +14,8 @@ $('#orders').click(function(){
     $(this).parent().addClass('hidden');
 })
 //overlay Product
+// de ce avem aici 2 ready functions? este suficient sa folosim una
+// ambele metode de declarare a statusului de ready sunt echivalente
 $(function(){
     $('.product').click(function(){
         $('.overlay-img-wrapper').css({backgroundImage:"url(assets/images/product-1/" + $(this).data('img') + ")"});
